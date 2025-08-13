@@ -1,23 +1,24 @@
 import java.util.Scanner;
 
-public class Exercicio01 {
+public class Exercicio02 {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
         int [] x= new int[10];
-        int maior= Integer.MIN_VALUE, menor=Integer.MAX_VALUE;
+        int pares=0, impares=0;
 
         for (int i= 0; i < x.length; i++) {
-            System.out.println("Me fale qual foi a pontuação que você tirou--> ");
+            System.out.println("Me fale qual foi a nota que você tirou--> ");
             x[i] = sc.nextInt();
 
-            if (x[i] > maior){
-                maior = x[i];
-            } else if (x[i] < menor) {
-                menor = x[i];
+            if (x[i] % 2==0){
+                pares++;
+            }
+            else {
+                impares++;
             }
         }
-        System.out.println("Maior valor= " + maior);
-        System.out.println("Menor valor= " + menor);
+        System.out.println("Quantidade de pares= " + pares);
+        System.out.println("Quantidade de impar= " + impares);
 
 
     }
